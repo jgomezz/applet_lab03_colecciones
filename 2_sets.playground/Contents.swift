@@ -36,9 +36,9 @@
 // Set Operations
 // https://developer.apple.com/documentation/swift/set#Set-Operations
 
- /*
+ // /*
 
-var primes: Set = [2, 3, 5, 7]
+let primes: Set = [2, 3, 5, 7]
 
 // Tests whether primes is a subset of a Range<Int>
 print(primes.isSubset(of: 0..<10))
@@ -60,10 +60,13 @@ if primes.isEmpty {
     print("We have \(primes.count) primes.")
 }
 
-let primesSum = primes.reduce(0, +)
+let primesSum = primes.reduce(0, *)
 print("primesSum = \(primesSum)")
 
+
+
 let primeStrings = primes.sorted().map(String.init)
+print("primes = \(primes)")
 print("primeStrings = \(primeStrings)")
 
 for number in primes {
@@ -83,7 +86,7 @@ let primesStringsSet = Set(primes.map(String.init))
 
 // Second Part
 
-// /*
+ /*
 
 // Creating and Initializing an Empty Set
 
@@ -174,3 +177,35 @@ farmAnimals.isDisjoint(with: cityAnimals)
 
 // */
 
+
+/*
+// Exercise 03
+
+var primes: Set = [2, 3, 5, 7]
+
+let favoriteNumbers = [5, 7, 15, 21]
+
+print(primes.intersection(favoriteNumbers))
+
+
+[2,3]
+[5,7]
+[15,21]
+[2,3,15,21]
+
+*/
+/*
+// Exercise 04
+
+var primes: Set = [2, 2, 5, 7]
+
+let favoriteNumbers = [5, 7, 15]
+
+print(primes.union(favoriteNumbers).sorted())
+
+
+[2, 5, 7, 15]
+[2, 2, 5, 7, 15]
+[15, 7, 5, 2]
+[15, 7, 5, 2, 2]
+*/

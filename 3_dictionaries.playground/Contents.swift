@@ -21,7 +21,7 @@
 
 // Overview
 
- /*
+// /*
  
 var responseMessages = [200: "OK",
                         403: "Access forbidden",
@@ -35,7 +35,8 @@ var emptyDict: [String: String] = [:]
 
 print(responseMessages[200] ?? "Default")
 
-let httpResponseCodes = [200, 403, 301]
+
+let httpResponseCodes = [200,201, 403, 301]
 
 for code in httpResponseCodes {
     if let message = responseMessages[code] {
@@ -52,15 +53,18 @@ responseMessages[404] = "Not found"
 responseMessages[500] = nil
 print(responseMessages)
 
+
 var interestingNumbers = ["primes": [2, 3, 5, 7, 11, 13, 17],
                           "triangular": [1, 3, 6, 10, 15, 21, 28],
                           "hexagonal": [1, 6, 15, 28, 45, 66, 91]]
 for key in interestingNumbers.keys {
-    interestingNumbers[key]?.sort(by: >)
+    interestingNumbers[key]?.sort(by: <)
 }
 
 print(interestingNumbers["primes"]!)
+print(interestingNumbers["triangular"]!)
 
+/*
 // Iterating Over the Contents of a Dictionary
 
 let imagePaths = ["star": "/glyphs/star.png",
@@ -87,7 +91,7 @@ print(imagePaths[glyphIndex!])
 // */
 
 
-// /*
+ /*
 
 // Creating an Empty Dictionary
 var namesOfIntegers: [Int: String] = [:]
@@ -157,3 +161,28 @@ let airportNames = [String](airports.values)
 
 // */
 
+
+/*
+
+var responseMessages = [200: "OK",
+                        403: "Forbidden",
+                        404: "File not found"]
+
+responseMessages[404] = "Not found"
+
+responseMessages[403] = nil
+
+print(responseMessages)
+
+
+
+[200: "OK", 403: "nil", 404: "Not found"]
+
+[200: "OK", 404: "Not found"]
+
+[200: "OK", 403: nil, 404: "Not found"]
+
+[200: "OK", 403: "Forbidden", 404: "Not found"]
+
+
+*/

@@ -35,13 +35,11 @@
     // The full type name is also allowed
     var emptyFloats: Array<Float> = Array()
 
-
     // Accessing Array Values
 
     for street in streets {
         print("I don't live on \(street).")
     }
-
 
     if oddNumbers.isEmpty {
         print("I don't know any odd numbers.")
@@ -55,6 +53,9 @@
     }
 
     print(emptyDoubles.first, emptyDoubles.last, separator: ", ")
+
+    // An array of 'Int' elements
+    // let oddNumbers = [1, 3, 5, 7, 9, 11, 13, 15]
 
     print(oddNumbers[0], oddNumbers[3], separator: ", ")
 
@@ -216,3 +217,41 @@ for (index, value) in shoppingList.enumerated() {
 }
 
 // */
+
+
+/*
+// Exercise 01
+
+var students = ["Ben", "Jordell"]
+
+students.append("Maxime")
+
+students.append(contentsOf: ["Shakia"])
+
+print(students)
+
+
+["Ben",  "Jordell", "Maxime", "Shakia"]
+["Maxime", "Ben",  "Jordell", "Shakia"]
+["Ben",  "Jordell", "Shakia", "Maxime"]
+["Maxime", "Shakia", "Ben", "Jordell", ]
+*/
+
+// Exercise 02
+/*
+var students =  ["Ben", "Ivy", "Jordell"]
+
+students.insert("Liam", at: 1)
+
+students.remove(at: 0)
+
+students.removeLast()
+
+print(students)
+*/
+/*
+["Liam","Ivy"]
+["Ben", "Ivy"]
+["Ben", "Jordell"]
+["Liam", "Ben"]
+*/
