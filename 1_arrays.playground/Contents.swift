@@ -1,3 +1,5 @@
+import Cocoa
+
 /*
  Week : 3
  Subject : Arrays in Swift
@@ -10,7 +12,7 @@
 
 // -----------------------------
 //    Arrays
-//   https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Arrays
+//   https:docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Arrays
 //  https://developer.apple.com/documentation/swift/array
 // -----------------------------
 
